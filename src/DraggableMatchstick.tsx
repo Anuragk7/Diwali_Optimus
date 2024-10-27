@@ -166,21 +166,46 @@ const DraggableMatchstick: React.FC<DraggableMatchstickProps> = ({
 
       <style>{`
         .burning {
-          animation: burn 0.5s ease-in-out infinite alternate;
-          box-shadow: 0 0 10px rgba(255, 165, 0, 0.8),
-                      0 0 20px rgba(255, 69, 0, 0.6),
-                      0 0 30px rgba(255, 0, 0, 0.4);
-        }
-        @keyframes burn {
-          0% {
-            transform: scale(1);
-            opacity: 1;
-          }
-          100% {
-            transform: scale(1.2);
-            opacity: 0.8;
-          }
-        }
+  animation: burn 0.8s ease-in-out infinite alternate;
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.8),
+              0 0 20px rgba(255, 69, 0, 0.6),
+              0 0 30px rgba(255, 0, 0, 0.4);
+}
+
+@keyframes burn {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    background-color: red; /* Start with red */
+    border : white 3px;
+    
+  }
+  25% {
+    transform: scale(1.1);
+    background-color: orange; /* Transition to orange */
+    border : white 3px;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.9;
+    background-color: red; /* Transition to yellow */
+    border : orange
+    border : white 3px;
+  }
+  75% {
+    transform: scale(1.1);
+    opacity: 0.85;
+    background-color:  orange; /* Back to orange */
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    background-color: red; /* Stay red but keep it looped */
+    border : orange
+  
+  }
+}
+
       `}</style>
     </div>
   );
