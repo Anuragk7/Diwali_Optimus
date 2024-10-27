@@ -147,7 +147,8 @@ const DraggableMatchstick: React.FC<DraggableMatchstickProps> = ({
 
   return (
     <div
-      className="relative"
+    id = "m"
+      className="relative bg-transparent"
       style={{
         position: "absolute",
         left: coord.x,
@@ -161,7 +162,7 @@ const DraggableMatchstick: React.FC<DraggableMatchstickProps> = ({
         className={`w-6 h-6 rounded-full bg-red-600 ${isBurning ? "burning" : ""}`
     }
       ></div>
-      <div className={`w-2 bg-yellow-700 mt-1 mx-auto`} style={{ height: `${stickHeight}px` }}></div>
+      <div className={`w-2 bg-yellow-700 mt-1 mx-auto p-0`} style={{ height: `${stickHeight}px` }}></div>
 
       <style>{`
         .burning {

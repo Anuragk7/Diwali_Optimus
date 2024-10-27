@@ -16,6 +16,8 @@
 *{
   background-color: black;
 }
+
+
 /* src/tailwind.css */
 @tailwind base;
 @tailwind components;
