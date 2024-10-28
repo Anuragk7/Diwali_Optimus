@@ -25,7 +25,7 @@ export default function App() {
   
 
   return (
-    <div className='container w-screen'>
+    <div className='container w-screen min-w-full'>
      
       <Fireworks
         ref={ref}
