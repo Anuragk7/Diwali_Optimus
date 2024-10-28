@@ -25,7 +25,7 @@ export default function App() {
   
 
   return (
-    <div className='container'>
+    <div className='container w-screen'>
      
       <Fireworks
         ref={ref}
